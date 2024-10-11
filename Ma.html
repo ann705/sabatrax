@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ee.css">
+    <style>
+        @import url(ee.css);
+    </style>
+</head>
+<body>
+  <h1>Bienvenido Empleado</h1>
+  <form class="st" action="Maq.php" method="POST">
+      <ul>
+        <input type="hidden" name="id" value="algún_valor_id">
+
+        <li>
+          <label for="Fecha">Fecha</label>
+          <input type="date" name="Fecha" required>
+        </li>
+        <li>
+          <select name="Medidas" id="Medidas" required>
+            <option value="Sencillo">Sencillo</option>
+            <option value="Doble">Doble</option>
+            <option value="Semi doble">Semi doble</option>
+            <option value="Queen">Queen</option>
+            <option value="King">King</option>
+          </select>
+        </li>
+        <li>
+          <select name="tipoSabanas" id="tipoSabanas" required>
+            <option value="Plana">Plana</option>
+            <option value="Caucho">Caucho</option>
+            <option value="Cortinas">Cortina</option>
+            <option value="Fundas">Funda</option>
+          </select>
+        </li>
+        <li>
+          <select name="Proveedor" id="Proveedor" required>
+            <option value="Andu">Andu</option>
+            <option value="Samitex">Samitex</option>
+          </select>
+        </li>
+        <li>
+          <label for="Novedades">Novedades:</label>
+          <input type="text" name="Novedades" required>
+        </li>
+        <li>
+          <label for="Cantidad">Cantidad:</label>
+          <input type="number" name="Cantidad" required>
+        </li>
+
+        <!-- Input oculto para almacenar la imagen capturada -->
+        <input type="hidden" name="imageData" id="imageData">
+
+        <!-- Botón para abrir la cámara -->
+        <input type="button" id="openCamera" value="Abrir Cámara">
+
+        <!-- Video para mostrar la cámara en tiempo real -->
+        <video id="video" width="500" height="600" autoplay style="display:none;"></video>
+
+        <!-- Botón para capturar la imagen -->
+        <input type="button" id="capture" value="Tomar Foto" style="display:none;">
+
+        <!-- Canvas para mostrar la imagen capturada -->
+        <canvas id="canvas" width="500" height="500" style="display:none;"></canvas>
+
+        <!-- Botón para guardar la imagen -->
+        <input type="submit" id="savePhoto" value="Guardar" style="display:none;">
+      </ul>
+  </form>
+
+  <script>
+    var video = document.getElementById('video');
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var imageDataInput = document.getElementById('imageData');
+    var captureButton = document.getElementById('capture');
+    var openCameraButton = document.getElementById('openCamera');
+    var savePhotoButton = document.getElementById('savePhoto');
+
+    // Abrir la cámara cuando se presiona el botón "Abrir Cámara"
+    openCameraButton.addEventListener('click', function() {
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+                video.srcObject = stream;
+                video.style.display = 'block';
+                captureButton.style.display = 'inline';
+                openCameraButton.style.display = 'none';
+            }).catch(function(error) {
+                alert("Error al acceder a la cámara: " + error);
+            });
+        } else {
+            alert("Tu navegador no soporta la API getUserMedia.");
+        }
+    });
+
+    // Capturar la imagen al hacer clic en "Tomar Foto"
+    captureButton.addEventListener('click', function() {
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        // Convertir la imagen capturada a formato Base64
+        var imageData = canvas.toDataURL('image/png');
+        imageDataInput.value = imageData; // Guardar los datos de la imagen en el input oculto
+
+        // Detener la transmisión de la cámara
+        let tracks = video.srcObject.getTracks();
+        tracks.forEach(track => track.stop());
+
+        // Ocultar el video y el botón de captura
+        video.style.display = 'none';
+        captureButton.style.display = 'none';
+        canvas.style.display = 'block'; // Mostrar la imagen capturada
+        savePhotoButton.style.display = 'inline'; // Mostrar el botón para guardar la foto
+    });
+  </script>
+</body>
+</html>

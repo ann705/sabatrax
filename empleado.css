@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    background-color: #d19ea0; /* Fondo color cute */
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Menú lateral */
+#menu-lateral {
+    width: 20%;
+    background-color: #fff0f5; /* Fondo suave rosado */
+    padding: 20px;
+    border-right: 2px solid #e6b8c7; /* Borde suave */
+    border-radius: 10px;
+}
+
+/* Lista del menú lateral */
+#menu-lateral ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Elementos de la lista de empleados */
+#menu-lateral ul li {
+    margin-bottom: 10px;
+}
+
+/* Enlaces a los empleados */
+#menu-lateral ul li a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #ffdee7; /* Color cute rosado */
+    color: #5a5a5a;
+    display: block;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Efecto hover en los enlaces */
+#menu-lateral ul li a:hover {
+    background-color: #ffc5d1; /* Color más oscuro cute al pasar el mouse */
+}
+
+/* Contenedor del contenido principal */
+#contenido {
+    width: 80%;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco para claridad */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Botones generales */
+.btn {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #fdbac8; /* Color botón cute */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efecto hover en los botones */
+.btn:hover {
+    background-color: #ff94a7; /* Botón más oscuro */
+}
+
+/* Información del empleado */
+.empleado-info {
+    margin-bottom: 20px;
+}
+
+/* Estilos para los inputs del formulario */
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ffc5d1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+/* Encabezados */
+h2 {
+    color: #555;
+    margin-bottom: 20px;
+}

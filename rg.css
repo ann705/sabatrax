@@ -1,0 +1,95 @@
+body {
+  background-color: #e4a1a8; 
+  text-align: center;
+  font-family: 'Poppins', sans-serif; 
+}
+
+h1 {
+  color: #000000; 
+  margin-top: 20px;
+  font-weight: 600; 
+}
+
+form {
+  background-color: #FFFFFF; 
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #FF6F61; 
+  border-radius: 15px; 
+  width: 80%; 
+  max-width: 500px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+ul {
+  list-style: none; 
+  padding: 0; 
+}
+
+li {
+  margin-bottom: 15px; 
+}
+
+label {
+  display: block; 
+  margin-bottom: 5px; 
+  color: #333; 
+  font-weight: 500; 
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #FF6F61; 
+  border-radius: 8px; 
+  box-sizing: border-box; 
+  transition: border-color 0.3s; 
+  font-family: 'Poppins', sans-serif; 
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+  border-color: #FF6F61; 
+  outline: none; 
+}
+
+button {
+  background-color: #ff8599; 
+  color: white; 
+  padding: 10px 15px; 
+  border: none; 
+  border-radius: 10px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  font-family: 'Poppins', sans-serif; 
+}
+
+button:hover {
+  background-color: #3a9ae0; 
+}
+
+nav {
+  margin: 20px auto;
+  width: 80%;
+}
+
+nav a {
+  color: #fff; 
+  background-color: #67b2e7; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
+  text-decoration: none; 
+  margin: 5px; 
+  display: inline-block;
+  font-family: 'Poppins', sans-serif; 
+}
+
+nav a:hover {
+  background-color: #3a9ae0; 
+}
+body.tr {
+  background-color: lightblue; /* Fondo azul claro para toda la página */
+}

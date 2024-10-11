@@ -1,0 +1,88 @@
+/* Estilo general del body */
+body {
+    background-color: #d19ea0; /* Cambia el fondo de la página al color deseado */
+    margin: 0; /* Elimina el margen por defecto */
+    font-family: 'Poppins', sans-serif; /* Cambia la fuente a Poppins */
+}
+
+/* Estilo para el contenedor de la tabla */
+.container {
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+/* Estilo para el encabezado */
+h2 {
+    text-align: center; /* Centra el texto del encabezado */
+    font-family: 'Poppins', sans-serif; /* Asegura que el encabezado use la misma fuente */
+    margin-top: 30px; /* Añade un margen superior para separar del contenido anterior */
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px; /* Separación entre celdas */
+    background-color: #b87268;
+    border-radius: 15px; /* Bordes redondeados para la tabla */
+    overflow: hidden; /* Para que el contenido se ajuste dentro de los bordes redondeados */
+}
+
+/* Aplicar bordes redondeados a las celdas */
+th, td {
+    padding: 10px;
+    text-align: center;
+    background-color: #d19ea0;
+    border-radius: 15px; /* Bordes redondeados para las celdas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efecto flotante */
+}
+
+/* Estilo para las filas seleccionables */
+input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+/* Estilo para los botones */
+.m {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #b14040; /* Color rosado pastel */
+    color: #d19ea0;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; /* Cambia la fuente a Poppins */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.m:hover {
+    background-color: #773b3b; /* Color rosado más oscuro al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #b14040; /* Color rosado pastel */
+    color: #d19ea0;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif; /* Cambia la fuente a Poppins */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #773b3b;
+    transform: translateY(-2px);
+}
+
+/* Estilo para los párrafos del resultado */
+p {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 25px;
+    color: #000000;
+    text-align: center;
+}

@@ -1,0 +1,72 @@
+body {
+    background-color: #f8f3f8;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+form {
+    background-color: #d19ea0;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Hace que ocupe todo el ancho posible */
+    max-width: 1200px; /* Aumenta el tamaño máximo horizontal */
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+th, td {
+    padding: 12px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+}
+
+button {
+    display: block; /* Cambia a bloque para centrar */
+    width: auto; /* Mantiene el ancho automático */
+    padding: 10px 20px; /* Ajusta el padding para hacerlo más pequeño */
+    margin: 10px auto; /* Centra el botón horizontalmente */
+    background-color: #b14040;
+    border: none;
+    border-radius: 25px; /* Aumenta el valor para hacerlo más redondeado */
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4b4b;
+}

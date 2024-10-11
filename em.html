@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      
+      function seleccionarTodo() {
+          
+          var checkboxes = document.getElementsByName('casilla');
+          
+          
+          for (var i = 0; i < checkboxes.length; i++) {
+              checkboxes[i].checked = true;
+          }
+      }
+      </script>
+    <link rel="stylesheet" href="ee.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bienvenido Empleado Empaque</h1>
+    <table>
+      <button class="button" onclick="seleccionarTodo()">Seleccionar Todo</button>
+        <tr>
+          <td></td>
+            <td>Fecha</td>
+      <td>Medida</td>
+      <td>Tipo sabanas</td>
+      <td>Proveedor</td>
+      <td>Novedades</td>
+          <td>Cantidad</td>
+          <td>Evidencia</td>
+      </tr>
+        <tr>
+          <td><input type="checkbox" name="casilla"></td>
+          <td>12-03.2024</td>
+          <td>Doble</td>
+          <td>Juegos</td>
+          <td>Andu</td>
+          <td>Niguna</td>
+          <td>50</td>
+          <td><img src="Imagenes/o.jfif"></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="casilla"></td>
+          <td>12-03.2024</td>
+          <td>Doble</td>
+          <td>Juegos</td>
+          <td>Andu</td>
+          <td>Niguna</td>
+          <td>25</td>
+          <td><img src="Imagenes/i.jfif"></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="casilla"></td>
+          <td>12-03.2024</td>
+          <td>Doble</td>
+          <td>Juegos</td>
+          <td>Andu</td>
+          <td>Niguna</td>
+          <td>40</td>
+          <td><img src="Imagenes/u.jfif"></td>
+        </tr>
+      </table>
+    <a href="/Users/usuario/Downloads/gaes/co.html" class="m">Agregar Actividad</a>
+    <a href="404.html" class="m">Calcular</a>
+    <a href="inicio sesion.html" class="m">Volver</a>
+</body>
+</html>

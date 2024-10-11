@@ -1,0 +1,92 @@
+body { 
+    background-color: #d19ea0; 
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #ffffff; 
+    border: 2px solid #ff4f3c; 
+    border-radius: 15px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Reducir el padding */
+    width: 300px; /* Reducir el ancho */
+    max-width: 100%;
+    text-align: center; 
+}
+
+.logo {
+    display: block;
+    width: 100px; /* Ajusta el tamaño del logo */
+    max-width: 100%; /* Asegúrate de que no exceda el contenedor */
+    height: auto; /* Mantén la proporción de la imagen */
+    margin: 0 auto 10px auto; /* Centra la imagen horizontalmente */
+}
+
+h1 {
+    color: #160101; 
+    margin-bottom: 30px; /* Reducir el espacio debajo del título */
+}
+
+.form-group {
+    margin-bottom: 10px; /* Reducir el espacio entre campos */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1d0303; 
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: calc(100% - 20px);
+    padding: 8px; /* Ajusta el padding como desees */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Asegúrate de que el padding se incluya en el ancho total */
+}
+
+.password-container {
+    position: relative;
+    width: 100%; /* Asegúrate de que use todo el ancho disponible */
+    margin-bottom: 10px; /* Agrega un margen si es necesario */
+}
+
+input[type="password"] {
+    width: calc(100% - 40px); /* Deja espacio para el ojito (20px a cada lado) */
+    padding: 8px; /* Ajusta el padding como desees */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Asegúrate de que el padding se incluya en el ancho total */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px; /* Espacio desde la derecha */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px; /* Tamaño del ícono */
+    line-height: 0; /* Evita desbordes verticales */
+}
+
+button {
+    background-color: #e27468; 
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px; /* Reducir el padding del botón */
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ff9a9e; 
+}
